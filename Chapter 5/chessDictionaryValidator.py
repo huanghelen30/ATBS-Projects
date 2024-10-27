@@ -7,7 +7,7 @@ board = {
     '3e': 'wking'}
 
 # Define all valid chessboard positions
-validPositions = {f"{rank}{file}" for rank in range(1,9) for file in 'abcdefgh'}
+validPositions = {str(rank) + file for rank in range(1,9) for file in 'abcdefgh'}
 
 def isValidChessBoard(board):
     # Initialize counters for the pieces
