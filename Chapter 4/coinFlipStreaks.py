@@ -11,8 +11,11 @@ for experimentNumber in range(10000):
        else:
         flips.append('T')
     
-    print(''.join(flips))
+    flips_string = ''
+    for flip in flips:
+       flips_string += flip # Concatenating each flip to the string
     
+    print(flips_string)
 
     # Code that checks if there is a streak of 6 heads or tails in a row 
     for i in range(100 - 6):
@@ -20,4 +23,4 @@ for experimentNumber in range(10000):
             numberOfStreaks += 1
             break
 
-print('Change of streak: %.2f%%' % (numberOfStreaks / 100))
+print('Chance of streak: %.2f%%' % (numberOfStreaks / 10000 * 100))
